@@ -1,0 +1,35 @@
+Training model :  resnetv2_101x3_bitm
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 0/49
+----------
+/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
+Traceback (most recent call last):
+  File "main.py", line 85, in <module>
+    model, info = train_model(model,model_name, dataloader,dataset_sizes, criterion, optimizer,scheduler,num_epochs=num_epochs)
+  File "/home/uzair.khattak/ML_project/ml_project/train.py", line 54, in train_model
+    outputs = model(inputs)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 409, in forward
+    x = self.forward_features(x)
+  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 404, in forward_features
+    x = self.stages(x)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 290, in forward
+    x = self.blocks(x)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 182, in forward
+    return x + shortcut
+RuntimeError: CUDA out of memory. Tried to allocate 4.59 GiB (GPU 0; 23.63 GiB total capacity; 14.63 GiB already allocated; 4.23 GiB free; 17.85 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
