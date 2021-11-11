@@ -17,14 +17,14 @@ class args:
         self.lr = 0.01
 
         #set path where you want to save model weights
-        self.base_PATH='/home/uzair.khattak/ML_project/ml_project/saved_models/'
+        self.base_PATH='./saved_models/'
 
         #path to save train/test plots
-        self.figure_path='/home/uzair.khattak/ML_project/ml_project/figures/'
+        self.figure_path='./figures/'
 
         self.training=True  #if set to True, it will fine-tune the model using timm pretrained weights
 
-        self.model_PATH= '/home/uzair.khattak/ML_project/ml_project/saved_models/recylce_material512by512'   #set path for already trained weights if only evaluating
+        self.model_PATH= './saved_models/recylce_material512by512'   #set path for already trained weights if only evaluating
 
         #set dataset to choose: can only set CIFAR-10 or CIFAR-100 for now
 
