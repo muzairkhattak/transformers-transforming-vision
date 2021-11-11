@@ -1,2 +1,8 @@
 # ViTs_transforming_Vision
-Validating image classification benchmark results on ViTs and ResNets (v2)
+
+Validating image classification benchmark results on ViTs, DeiT and ResNets BiT models.
+
+-----------
+
+
+
