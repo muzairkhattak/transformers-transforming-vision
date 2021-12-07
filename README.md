@@ -6,6 +6,9 @@ This repository contains the code implementation for our ML701 project "Transfor
 
 We have tried to validate the official published results of ViTs, DeiTs and ResNets on CIFAR-10 and CIFAR-100, when they are pretrained on different datasets like ImageNet and ImageNet-21k. Additionally, we have used CUB200 dataset and exploited the importance of having high resolution images specifically for vision transformers. Our approch is summarized below:
 
+![Our methodology](extras/approach.jpg)
+
+
 Specifically, we provided finetuning and evalutation scripts for all ResNet-BiT, ViT and DeiT models which are supported by PyTorch library.
 
 
