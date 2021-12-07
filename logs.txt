@@ -1,35 +1,135 @@
 Training model :  resnetv2_101x3_bitm
 Files already downloaded and verified
 Files already downloaded and verified
-Epoch 0/49
+Epoch 0/29
 ----------
-/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:129: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
   warnings.warn("Detected call of `lr_scheduler.step()` before `optimizer.step()`. "
-Traceback (most recent call last):
-  File "main.py", line 85, in <module>
-    model, info = train_model(model,model_name, dataloader,dataset_sizes, criterion, optimizer,scheduler,num_epochs=num_epochs)
-  File "/home/uzair.khattak/ML_project/ml_project/train.py", line 54, in train_model
-    outputs = model(inputs)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 409, in forward
-    x = self.forward_features(x)
-  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 404, in forward_features
-    x = self.stages(x)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
-    input = module(input)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 290, in forward
-    x = self.blocks(x)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
-    input = module(input)
-  File "/home/uzair.khattak/.local/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/uzair.khattak/.conda/envs/CVmigrated/lib/python3.8/site-packages/timm/models/resnetv2.py", line 182, in forward
-    return x + shortcut
-RuntimeError: CUDA out of memory. Tried to allocate 4.59 GiB (GPU 0; 23.63 GiB total capacity; 14.63 GiB already allocated; 4.23 GiB free; 17.85 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+train Loss: 2.3024 Acc: 0.9097
+val Loss: 0.8392 Acc: 0.9125
+Epoch 1/29
+----------
+train Loss: 0.7736 Acc: 0.9454
+val Loss: 0.8065 Acc: 0.9273
+Epoch 2/29
+----------
+train Loss: 0.7653 Acc: 0.9504
+val Loss: 1.0306 Acc: 0.9230
+Epoch 3/29
+----------
+train Loss: 0.9069 Acc: 0.9519
+val Loss: 0.9651 Acc: 0.9336
+Epoch 4/29
+----------
+train Loss: 0.9271 Acc: 0.9553
+val Loss: 1.0657 Acc: 0.9344
+Epoch 5/29
+----------
+train Loss: 0.8968 Acc: 0.9585
+val Loss: 1.0747 Acc: 0.9350
+Epoch 6/29
+----------
+train Loss: 0.3363 Acc: 0.9787
+val Loss: 0.8882 Acc: 0.9387
+Epoch 7/29
+----------
+train Loss: 0.2751 Acc: 0.9810
+val Loss: 0.8357 Acc: 0.9410
+Epoch 8/29
+----------
+train Loss: 0.2254 Acc: 0.9830
+val Loss: 0.8123 Acc: 0.9395
+Epoch 9/29
+----------
+train Loss: 0.1936 Acc: 0.9832
+val Loss: 0.7818 Acc: 0.9395
+Epoch 10/29
+----------
+train Loss: 0.1823 Acc: 0.9839
+val Loss: 0.7627 Acc: 0.9400
+Epoch 11/29
+----------
+train Loss: 0.1561 Acc: 0.9851
+val Loss: 0.7663 Acc: 0.9400
+Epoch 12/29
+----------
+train Loss: 0.1457 Acc: 0.9856
+val Loss: 0.7083 Acc: 0.9398
+Epoch 13/29
+----------
+train Loss: 0.1204 Acc: 0.9869
+val Loss: 0.7044 Acc: 0.9383
+Epoch 14/29
+----------
+train Loss: 0.1141 Acc: 0.9872
+val Loss: 0.7124 Acc: 0.9385
+Epoch 15/29
+----------
+train Loss: 0.1112 Acc: 0.9878
+val Loss: 0.7104 Acc: 0.9385
+Epoch 16/29
+----------
+train Loss: 0.1112 Acc: 0.9882
+val Loss: 0.7041 Acc: 0.9385
+Epoch 17/29
+----------
+train Loss: 0.1124 Acc: 0.9882
+val Loss: 0.7018 Acc: 0.9383
+Epoch 18/29
+----------
+train Loss: 0.1063 Acc: 0.9878
+val Loss: 0.7028 Acc: 0.9381
+Epoch 19/29
+----------
+train Loss: 0.1074 Acc: 0.9879
+val Loss: 0.7027 Acc: 0.9383
+Epoch 20/29
+----------
+train Loss: 0.1001 Acc: 0.9881
+val Loss: 0.7024 Acc: 0.9381
+Epoch 21/29
+----------
+train Loss: 0.1048 Acc: 0.9883
+val Loss: 0.7022 Acc: 0.9381
+Epoch 22/29
+----------
+train Loss: 0.1050 Acc: 0.9880
+val Loss: 0.7017 Acc: 0.9381
+Epoch 23/29
+----------
+train Loss: 0.1035 Acc: 0.9882
+val Loss: 0.7014 Acc: 0.9381
+Epoch 24/29
+----------
+train Loss: 0.1077 Acc: 0.9884
+val Loss: 0.7012 Acc: 0.9381
+Epoch 25/29
+----------
+train Loss: 0.1067 Acc: 0.9881
+val Loss: 0.7012 Acc: 0.9381
+Epoch 26/29
+----------
+train Loss: 0.0941 Acc: 0.9891
+val Loss: 0.7010 Acc: 0.9383
+Epoch 27/29
+----------
+train Loss: 0.1036 Acc: 0.9887
+val Loss: 0.7010 Acc: 0.9383
+Epoch 28/29
+----------
+train Loss: 0.1015 Acc: 0.9887
+val Loss: 0.7010 Acc: 0.9383
+Epoch 29/29
+----------
+train Loss: 0.0983 Acc: 0.9887
+val Loss: 0.7010 Acc: 0.9383
+Training complete in 746m 51s
+Best val Acc: 0.941016
+Files already downloaded and verified
+Inference completed in 4m 58s
+Test accuracy: 0.953323
+Training model :  resnetv2_101x3_bitm_in21k
+Files already downloaded and verified
+Files already downloaded and verified
+Epoch 0/29
+----------

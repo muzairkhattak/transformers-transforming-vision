@@ -2,8 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 # from efficientnet_pytorch import EfficientNet
-
-from torchvision import models
 import timm
 
 class Net(nn.Module):
@@ -55,11 +53,12 @@ class ResNet152:
 
 #both ViT and DeiT
 class VisionTransformers:
-    def __init__(self, class_num,model_version):
+    def __init__(self, class_num,model_version,img_size):
         super().__init__()
         self.model_version=model_version
-        self.model_ft = timm.create_model(model_version,pretrained = True)  #we will do the finetuning for now
+        self.model_ft = timm.create_model(model_version,pretrained = True,img_size=img_size)  #we will do the finetuning for now
         self.classes=class_num
+        
 
 
     def return_model(self):
