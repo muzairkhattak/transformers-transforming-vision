@@ -1,4 +1,4 @@
-# ViTs_transforming_vision
+# transformers_transforming_vision
 
 Validating image classification benchmark results on ViTs, DeiT and ResNets BiT models.
 
