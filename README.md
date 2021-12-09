@@ -35,12 +35,13 @@ To run the scripts, following packages needs to be installed (preferably on Ubun
   
   
  To install these, use pip package installer and execute the following commands:
-  ```bash
-$ pip3 install pip install timm
-```
+
   For CUDA-10.2, install pytorch and torchvision as follows:
   ```bash
  $ pip3 install torch==1.10.0+cu102 torchvision==0.11.1+cu102 torchaudio===0.10.0+cu102 -f https://download.pytorch.org/whl/cu102/torch_stable.html
+```
+  ```bash
+$ pip3 install pip install timm
 ```
 ------------
 
