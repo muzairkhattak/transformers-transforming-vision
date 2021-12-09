@@ -20,8 +20,28 @@ Specifically, we provide finetuning and evalutation scripts for all ResNet-BiT, 
 
 Requirements
 ---
-
-
+To run the scripts, following packages needs to be installed (preferably on Ubuntu 18.04 LTS / 20.04 LTS):
+<ul>
+  <li>
+    Python (version 3.6 or greater)
+  </li>
+    <li>
+    Pytorch (version 1.10) and Torchvision (version 0.3.0)
+  </li>
+    <li>
+    Pytorch timm library (preferably version 0.4.12)
+    </li>
+  </ul>
+  
+  
+ To install these, use pip package installer and execute the following commands:
+  ```bash
+$ pip3 install pip install timm
+```
+  For CUDA-10.2, install pytorch and torchvision as follows:
+  ```bash
+ $ pip3 install torch==1.10.0+cu102 torchvision==0.11.1+cu102 torchaudio===0.10.0+cu102 -f https://download.pytorch.org/whl/cu102/torch_stable.html
+```
 ------------
 
 Finetuning models
