@@ -45,6 +45,29 @@ $ pip3 install pip install timm
 ```
 ------------
 
+## Command Line Parameters
+The below table lists the command line parameters available for `train_mpii.py` and `evaluate_mpii.py` scripts.
+
+### `main.py`
+
+| Parameter | Description  | Possible Values |
+| ------------- | ------------- | ------------- |
+| --batch-size | batch size of dataloader | int: any integer value, e.g. 16, 24, etc. |
+| --num-epochs | number of training epochs. | int: (any integer value) |
+| --model-name  | name of model to evaluate/finetune | string: ViTs, DeiTs and ResNets models supported in timm, eg: 'deit_base_patch16_224' |
+| --img-size    | resolution of input images | int: eg: 224 |
+| --optimizer   | optimizer for training | string: possible values are 'ADAM' and 'SGD' |
+| --lr          | learning rate during finetuning | float: any float value, e.g 0.01 |
+| --training    | finetune from checkpoint | boolean: (default: True), put False for evaluation |
+| --weights-path | path where you want to save model weights after training. | int: any integer value, e.g. 16, 24, etc. |
+| --load-weights | path from where trained weights are to be loaded (only required for evaluating a pretrained model. | int: any integer value, e.g. 1, 2, etc. |
+| --figure-path | path for saving plots. | float: any float value, e.g. 0.001, 0.00025, etc. |
+| --data-path' | path where dataset is present. | float: (default: './data') |
+| --dataset-name  | Choice of dataset | string: can choose from ['CIFAR10', 'CIFAR100', 'CUB200']|
+| --val-pct  | validation split from the training set. | float: (default: 0.1) |
+
+
+
 Finetuning models
 ---
 
