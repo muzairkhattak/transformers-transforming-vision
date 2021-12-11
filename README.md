@@ -88,7 +88,7 @@ $ python main.py --model-name deit_base_patch16_224 --dataset-name CUB200 --num-
 Its expected output is shown below:
 
 <p align="center">
-  <img src="extras/evaluation_sample.png">
+  <img src="extras/finetuning.png">
 </p>
 ------------
 
@@ -112,7 +112,7 @@ $ python main.py --training False --model-name deit_base_patch16_224 --dataset-n
 Its expected output is shown below:
 
 <p align="center">
-  <img src="extras/evaluation_sample.png">
+  <img src="extras/eval.png">
 </p>
 
 
