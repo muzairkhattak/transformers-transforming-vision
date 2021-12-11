@@ -70,7 +70,7 @@ The below table lists the command line parameters available for `main.py` which 
 | --val-pct  | validation split from the training set. | float: (default: 0.1) |
 
 
-<b> NOTE: To use CUB200 dataset in the experiments, please manually download the <a href="https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view">CUB_200_2011.tgz</a>file and paste it into the './data' directory. </b>
+<b> NOTE: To use CUB200 dataset in the experiments, please manually download the <a href="https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view">CUB_200_2011.tgz</a> file and paste it into the './data' directory. </b>
 
 Finetuning models
 ---
