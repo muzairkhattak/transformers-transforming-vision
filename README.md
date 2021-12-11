@@ -96,7 +96,7 @@ Its expected output is shown below:
 ------------
 
 
-Evaluating model
+Evaluating models
 ---
 To evalute a model already finetuned on, we can run the main.py as follows:
 
