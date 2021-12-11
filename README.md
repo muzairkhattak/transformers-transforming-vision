@@ -34,19 +34,22 @@ To run the scripts, following packages needs to be installed (preferably on Ubun
   </ul>
   
   
- To install these, use pip package installer and execute the following commands:
-
-  For CUDA-10.2, install pytorch and torchvision as follows:
+ To install these, use pip package installer to install those one by one, or you can anaconda environment (highly recommended) using the provided env.yml file.
+ 
+ TO set-up environment using the anaconda environment please follow and execute the following commands in terminal:
+ 
+ 1. Create new conda environment using the env.yml file (provided in repository).
   ```bash
- $ pip3 install torch==1.10.0+cu102 torchvision==0.11.1+cu102 torchaudio===0.10.0+cu102 -f https://download.pytorch.org/whl/cu102/torch_stable.html
+ $ conda env create --file env.yml
 ```
+ 2. Now all required packages are installed in this environment, it can now be activated as follows:.
   ```bash
-$ pip3 install pip install timm
+$ conda activate visiontimm
 ```
 ------------
 
 ## Command Line Parameters
-The below table lists the command line parameters available for `train_mpii.py` and `evaluate_mpii.py` scripts.
+The below table lists the command line parameters available for `main.py` which is used for both evaluation as well as finetuning of models.
 
 ### `main.py`
 
@@ -59,11 +62,11 @@ The below table lists the command line parameters available for `train_mpii.py` 
 | --optimizer   | optimizer for training | string: possible values are 'ADAM' and 'SGD' |
 | --lr          | learning rate during finetuning | float: any float value, e.g 0.01 |
 | --training    | finetune from checkpoint | boolean: (default: True), put False for evaluation |
-| --weights-path | path where you want to save model weights after training. | int: any integer value, e.g. 16, 24, etc. |
-| --load-weights | path from where trained weights are to be loaded (only required for evaluating a pretrained model. | int: any integer value, e.g. 1, 2, etc. |
-| --figure-path | path for saving plots. | float: any float value, e.g. 0.001, 0.00025, etc. |
-| --data-path' | path where dataset is present. | float: (default: './data') |
-| --dataset-name  | Choice of dataset | string: can choose from ['CIFAR10', 'CIFAR100', 'CUB200']|
+| --weights-path | path where you want to save model weights after training. | string: (default: './saved_models') |
+| --load-weights | path from where trained weights are to be loaded (only required for evaluating a pretrained model. | string: path of the model weights eg. path/to/my/model/weights |
+| --figure-path | path for saving plots. | string: (default: './figures') |
+| --data-path' | path where dataset is present. | string: (default: './data') |
+| --dataset-name  | Choice of dataset | string: can choose from 'CIFAR10', 'CIFAR100', 'CUB200'|
 | --val-pct  | validation split from the training set. | float: (default: 0.1) |
 
 
