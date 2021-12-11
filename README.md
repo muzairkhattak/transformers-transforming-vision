@@ -73,7 +73,14 @@ The below table lists the command line parameters available for `main.py` which 
 
 Finetuning models
 ---
+To finetune a timm model for, let say CUB200, we can run the main.py as follows:
 
+ $ python main.py --training False --load-weights ./saved_models/deit_base_patch16_224_1_128CUB200
+```
+ 2. Now all required packages are installed in this environment, it can now be activated as follows:.
+  ```bash
+$ conda activate visiontimm
+```
 
 ------------
 
@@ -81,7 +88,24 @@ Finetuning models
 
 Evaluating model
 ---
+To evalute a model already finetuned on, let say CUB200, we can run the main.py as follows:
 
+ ```bash
+ $ python main.py --training False --model-name 'timm model name' --dataset-name 'dataset name' --load-weights ./saved_model_weights_name
+```
+
+### Sample input and output for evaluation:
+
+To evaluate a finetuned/trained DeiT-Base model (deit_base_patch16_224) on CUB200 dataset with its given weights file, we can execute as follows:
+
+  ```bash
+$ python main.py --training False --model-name deit_base_patch16_224 --dataset-name CUB200 --load-weights ./saved_models/deit_224
+```
+Its expected output is shown below:
+
+<p align="center">
+  <img src="extras/approach.png" width="700" height="400">
+</p>
 
 
 ------------
