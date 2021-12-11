@@ -90,8 +90,9 @@ Its expected output is shown below:
 <p align="center">
   <img src="extras/finetuning.png">
 </p>
-------------
 
+
+------------
 
 
 Evaluating model
