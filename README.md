@@ -12,6 +12,7 @@ We have tried to validate the official published results of ViTs, DeiTs and ResN
   <img src="extras/approach.png" width="700" height="400">
 </p>
 
+Comprehensive report for this project can be found <a href="https://github.com/Uzair-Khattak/transformers_transforming_vision/blob/main/transformerstransformingvision_project_report.pdf">here</a>.
 Specifically, we provide finetuning and evalutation scripts for all ResNet-BiT, ViT and DeiT models which are supported by PyTorch library.
 
 
